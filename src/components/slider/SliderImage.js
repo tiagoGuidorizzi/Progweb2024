@@ -2,21 +2,20 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Box, Image, ResponsiveContext, Stack, Text } from "grommet";
 
-const SliderImage = ({ name, score, src }) => (
+const SliderImage = ({score, src }) => (
   <ResponsiveContext.Consumer>
     {size => (
       <Stack anchor="bottom">
         <Box
-          round="xlarge"
           overflow="hidden"
           align="center"
-          margin="small"
-          height="large"
+          //margin=""
+          height="medium"
         >
-          <Image src={src} />
-        </Box>
-        <Box margin="xlarge">
-          {name}
+          <Image 
+            src={src}  
+            fit="contain"
+          />
         </Box>
         <Box>
           {size !== "small" && size !== "xsmall" && (
