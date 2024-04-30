@@ -2,14 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Box, Image, ResponsiveContext, Stack, Text } from "grommet";
 
-const SliderImage = ({score, src }) => (
+const SliderImage = ({name,score, src }) => (
   <ResponsiveContext.Consumer>
     {size => (
       <Stack anchor="bottom">
         <Box
           overflow="hidden"
           align="center"
-          //margin=""
+          margin="none"
           height="medium"
         >
           <Image 
@@ -25,6 +25,8 @@ const SliderImage = ({score, src }) => (
               color="white"
               size="large"
             >
+              {name}
+              {" "  }
               {score}
             </Text>
           )}
