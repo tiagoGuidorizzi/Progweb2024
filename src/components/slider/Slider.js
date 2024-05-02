@@ -44,7 +44,7 @@ class InstaSlider extends Component {
     return (
       <ResponsiveContext.Consumer>
         {size => (
-          <Box pad={{horizontal:"large"}} elevation="xxsmall">
+          <Box pad={{horizontal:"large"}} elevation="large">
             <Slider slidesToShow={this.getNumOfItemsToShow(size)} {...settings}>
               {items}
             </Slider>

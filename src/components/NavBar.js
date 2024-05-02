@@ -1,5 +1,5 @@
 import React from "react";
-import { Anchor, Box, Text, ResponsiveContext } from "grommet";
+import { Anchor, Box, Text } from "grommet";
 
 const NavBar = () => (
     <Box direction="row" gap="xxsmall" justify="center">

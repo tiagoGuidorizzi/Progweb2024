@@ -4,8 +4,6 @@ import { render } from "react-dom";
 import {
   Box,
   Grommet,
-  Nav, 
-
 } from "grommet";
 
 import {NavHeader, Slider, Destaque, Categoria, MiniSlider} from "./components/index.js";
@@ -20,7 +18,21 @@ class App extends Component {
         <NavHeader />
         <Destaque />
         <Slider />
-        <Box >
+        <Box 
+        elevation="medium"
+        >
+          <Categoria />
+          <MiniSlider />
+        </Box>
+        <Box 
+        elevation="medium"
+        >
+          <Categoria />
+          <MiniSlider />
+        </Box>
+        <Box 
+        elevation="medium"
+        >
           <Categoria />
           <MiniSlider />
         </Box>

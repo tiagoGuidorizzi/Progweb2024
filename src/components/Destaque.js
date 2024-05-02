@@ -5,7 +5,6 @@ const Destaque = () => (
     <Box
         direction="row"
         justify="center"
-        
         gap="small"
         pad={{ top: "medium", horizontal:"xxsmall", bottom:""}}
         >

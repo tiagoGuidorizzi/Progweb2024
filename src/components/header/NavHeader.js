@@ -4,7 +4,7 @@ import { AppBar } from "./AppBar";
 import {NavBar} from "../NavBar"
 const NavHeader = () => (
     <ResponsiveContext.Consumer>
-        {size => (
+        {() => (
             <AppBar>
                 <Box
                     direction="row"
@@ -16,9 +16,7 @@ const NavHeader = () => (
                     <Anchor
                         href="/"
                         color="none"
-                        label={
-                            size !== "xsmall" &&
-                            size !== "small" && <Text size="medium" color="white">Cineboxd</Text>
+                        label={ <Text size="xlarge" color="white">Cineboxd</Text>
                         }
                     />
                 </Box>

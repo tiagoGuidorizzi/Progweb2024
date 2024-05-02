@@ -6,7 +6,12 @@ export const customTheme = deepMerge(grommet, {
     breakpoints: {
       xsmall: {
         value: 400
-      }
+      },
+  colors: {
+    brand: {
+      dark: "#111010",
+      light: "#000000"
+    },
     }
   },
   heading: {
@@ -22,5 +27,6 @@ export const customTheme = deepMerge(grommet, {
     placeholder: {
       extend: () => `color: #44444`
     }
+  }
   }
 });

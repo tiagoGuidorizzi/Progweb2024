@@ -1,18 +1,14 @@
 import React from "react";
 import { Add } from 'grommet-icons';
-import { Box, Button, Text } from "grommet";
+import { Box, Button } from "grommet";
 
-const Botao = () => {
-    <Box pad="large" gap="large">
-        <Box align="center">
-            <Button hoverIndicator="light-1" onClick={() => {}} active>
-                <Box pad="small" direction="row" align="center" gap="small">
-                    <Add />
-                    <Text>Add</Text>
-                </Box>
-            </Button>
+export const Botao = () => (
+        <Box pad={{bottom: "30px"}} gap="large" justify="center">
+        {/* Out of the Box Button */}
+        <Box align="center" round="xlarge" >
+            <Button icon={<Add />} label="Add" onClick={() => {}} />
         </Box>
-    </Box>
-}
+        </Box>
+  );
 
 export {Botao as BotaoAddLista};

@@ -6,8 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 import { Box, ResponsiveContext} from "grommet";
 import { MiniSliderImage } from "./MiniSliderImage";
-import { BotaoAddLista } from "./BotaAddLista";
-import { data, images } from "../data";
+import { data, images } from "./data";
 
 class MiniSlider extends Component {
     galleryItems() {
@@ -34,24 +33,24 @@ class MiniSlider extends Component {
     render() {
       const items = this.galleryItems();
       const settings = {
+        focusOnSelect: true,
         className: "center",
         infinite: true,
         slidesToScroll: 1,
         speed: 1200,
-        autoplay: false
+        autoplay: false,
+        swipeToSlide: true
       };
   
       return (
         <ResponsiveContext.Consumer>
           {size => (
-            <Box pad={{horizontal:"large"}} elevation="xxsmall">
+            <Box pad={{horizontal:"large"}}>
                 <Box>
                     <Slider slidesToShow={this.getNumOfItemsToShow(1)} {...settings}>
                     {items}
                     </Slider>
-                </Box>
-                <Box>
-                    <BotaoAddLista />
+                    
                 </Box>
             </Box>
           )}
