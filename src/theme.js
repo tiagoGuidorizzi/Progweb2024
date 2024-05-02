@@ -23,5 +23,4 @@ export const customTheme = deepMerge(grommet, {
       extend: () => `color: #44444`
     }
   }
-  
 });

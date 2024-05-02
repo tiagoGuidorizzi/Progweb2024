@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
 
-import { Box, Heading, ResponsiveContext, Stack, Text } from "grommet";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+import { Box, ResponsiveContext} from "grommet";
 import { SliderImage } from "./SliderImage";
 
-import { data, images } from "./data";
-import { Destaque } from "../Destaque";
+import { data, images } from "../data";
 
 class InstaSlider extends Component {
   galleryItems() {
@@ -42,10 +44,10 @@ class InstaSlider extends Component {
     return (
       <ResponsiveContext.Consumer>
         {size => (
-          <Box pad={{top:"xxsmall"}} >
-              <Slider slidesToShow={this.getNumOfItemsToShow(size)} {...settings}>
-                {items}
-              </Slider>
+          <Box pad={{horizontal:"large"}} elevation="xxsmall">
+            <Slider slidesToShow={this.getNumOfItemsToShow(size)} {...settings}>
+              {items}
+            </Slider>
           </Box>
         )}
       </ResponsiveContext.Consumer>

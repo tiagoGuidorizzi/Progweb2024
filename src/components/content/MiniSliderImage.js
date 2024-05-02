@@ -2,28 +2,29 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Anchor, Box, Image, ResponsiveContext, Stack } from "grommet";
 
-const SliderImage = ({name,score, src }) => (
+const MiniSliderImage = ({name,score, src }) => (
   <ResponsiveContext.Consumer>
     {size => (
       <Stack anchor="bottom">
         <Box
+          round=""
           overflow="hidden"
           align="center"
           margin="0"
-          height="large"
+          height="medium"
         >
           <Image 
             src={src}  
-            fit="contain"
+            fit="fill"
           />
         </Box>
         <Box>
           {size !== "small" && size !== "xsmall" && (
             <Anchor
-              margin={{ bottom: "50px" }}
+              margin={{ bottom: "-30px" }}
               weight="bold"
-              color="white"
-              size="medium"
+              color="black"
+              size="xsmall"
             >
               {name}
             </Anchor>
@@ -34,10 +35,10 @@ const SliderImage = ({name,score, src }) => (
   </ResponsiveContext.Consumer>
 );
 
-SliderImage.propTypes = {
+MiniSliderImage.propTypes = {
   name: PropTypes.array,
   score: PropTypes.array,
   src: PropTypes.string
 };
 
-export { SliderImage };
+export { MiniSliderImage };

@@ -11,7 +11,7 @@ const NavHeader = () => (
                     justify="between"
                     alignSelf="center"
                     gap="medium"
-                    pad={{ top: "large", horizontal: "xlarge" }}
+                    pad={{ top: "large", horizontal: "medium" }}
                 >
                     <Anchor
                         href="/"
@@ -27,7 +27,7 @@ const NavHeader = () => (
                     justify="between"
                     alignSelf="center"
                     gap="medium"
-                    pad={{ top: "large", horizontal: "xlarge" }}
+                    pad={{ top: "large", horizontal: "medium" }}
                 >                
                     <NavBar/>
                 </Box>

@@ -4,7 +4,7 @@ import { Header } from "grommet";
 const AppBar = (props) => (
      <Header
        background="#001969"
-       pad={{ left: "medium", right: "small", vertical: "small" }}
+       pad={{vertical: "small"}}
        elevation="large"
        {...props}
      />

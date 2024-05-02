@@ -2,16 +2,14 @@ import React, { Component } from "react";
 import { render } from "react-dom";
 
 import {
+  Box,
   Grommet,
   Nav, 
 
 } from "grommet";
 
-import {Slider} from "./components/slider/Slider";
-import {NavHeader} from "./components/header/NavHeader";
-
+import {NavHeader, Slider, Destaque, Categoria, MiniSlider} from "./components/index.js";
 import { customTheme } from "./theme";
-import { Destaque } from "./components/Destaque";
 
 
 
@@ -22,7 +20,10 @@ class App extends Component {
         <NavHeader />
         <Destaque />
         <Slider />
-
+        <Box >
+          <Categoria />
+          <MiniSlider />
+        </Box>
       </Grommet>
     );
   }

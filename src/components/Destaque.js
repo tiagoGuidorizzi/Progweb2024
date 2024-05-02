@@ -1,5 +1,5 @@
 import React from "react";
-import { Anchor, Box, Text, ResponsiveContext, Heading } from "grommet";
+import { Box, Heading } from "grommet";
 
 const Destaque = () => (
     <Box
@@ -7,9 +7,9 @@ const Destaque = () => (
         justify="center"
         
         gap="small"
-        pad={{ top: "medium", horizontal:"xxsmall", bottom:"none"}}
+        pad={{ top: "medium", horizontal:"xxsmall", bottom:""}}
         >
-            <Heading size="small" margin="none"weight="bold" color="black"> Destaques </Heading>
+        <Heading size="small" margin="none"weight="bold" color="black"> Destaques </Heading>
     </Box>
 );
 
