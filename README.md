@@ -14,6 +14,7 @@ O projeto do 'Cineboxd' foi feito em React com auxilio das frameworks [Grommet](
 
 ```
 npm install react-slick --save
+npm install slick-carousel --save
 ```
 ```
 npm install grommet styled-components --save
