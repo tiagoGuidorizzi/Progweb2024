@@ -19,7 +19,9 @@ npm install slick-carousel --save
 ```
 npm install grommet styled-components --save
 ```
-
+```
+npm i react-router-dom --save styled-components
+```
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ### `npm start`
