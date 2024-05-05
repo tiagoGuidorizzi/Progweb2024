@@ -1,21 +1,25 @@
 import React from "react";
-import { Anchor, Box, Text } from "grommet";
+import { Box, Text, Nav } from "grommet";
+import { Link } from "react-router-dom";
+
+
+const items = [
+    { label: 'Favoritos', href: '/Home' },
+    { label: 'Meu Perfil', href: '/Perfil'},
+  ];
 
 const NavBar = () => (
-    <Box direction="row" gap="xxsmall" justify="center">
-        <Anchor
-            href="/"
-            color="none"
-            
-            label={ <Text size="medium" color="white"> Favoritos </Text>}              
-        />
-        <Box width={10}/>
-        <Anchor
-            href="/"
-            color="none"
-            label={ <Text size="medium" color="white"> Meu Perfil</Text>}              
-        />
-    </Box>
+        <Nav direction="row">
+        {   items.map((item) => (
+            <Box>
+                <Link
+                    to={item.href}
+                    color="none">
+                  <Text size="medium" color="white"> {item.label} </Text>  
+                </Link> 
+            </Box>
+          ))}
+        </Nav>
 );
 
 export {NavBar};
