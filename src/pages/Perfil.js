@@ -1,35 +1,154 @@
 import React from "react";
 
-import { Box, Grid, Page, Text, Image } from "grommet";
+import { Box, Grid, Page, Text, Avatar } from "grommet";
+import { AddCircle, Favorite } from "grommet-icons";
+
+const src ="./avatar.jpg"
 
 const Perfil = () => {
     return (
-    <Page> 
-        <Grid
-        rows={['medium', 'medium']}
-        columns={['20%', '80%']}
-        gap=""
-
-        areas={[
-            
-            { name: 'perfil', start: [0, 0], end: [0, 1] },
-            { name: 'filmes', start: [1, 0], end: [1, 1] },
-        ]}
+    <Page
+        justify="center"
+    > 
+        <Box
+            margin={{top:"medium"}}
+            justify="center"
+            direction="row"
         >
-        <Box 
-            gridArea="perfil" 
-            background="brand"
-            align="center"
-            justify="top"
-        > 
-            <Text size="xlarge"> Perfil </Text>
-            <Box>
-                <Image></Image>
-            </Box>
+            <Grid
+                rows={['xsmall', 'medium', 'medium']}
+                columns={['medium', 'medium']}
+                gap="small"
+                areas={[
+                    { name: 'headerPerfil', start: [0, 0], end: [1, 0] },
+                    { name: 'foto', start: [0, 1], end: [0, 1] },
+                    { name: 'descricao', start: [1, 1], end: [1, 1] },
+                    { name: 'filmes', start: [0, 2], end: [1, 2] },
+                ]}
+            >
+                <Box 
+                    gridArea="headerPerfil" 
+                    background="brand"
+                    direction="row"
+                    alignContent="around"
+                    justify="between"
+                >
+                    <Box
+                        justify="center"
+                        align="center"
+                        margin={{left:"small"}}
+                    >
+                        <Text size="large">Perfil</Text>
+                    </Box>
+                    <Box 
+                        justify="center"
+                        align="center"
+                        margin={{right:"small"}}
+                        direction="row"
+                    >
+                        <Box 
+                            margin="small"
+                            justify="center"
+                            align="center"
+                        >        
+                            <AddCircle size="medium"/>
+                            <Text size="xsmall">Follow</Text>
+                        </Box>
+                        <Box 
+                            margin="small"
+                            justify="center"
+                            align="center"
+                        >  
+                            <Favorite size="medium"/>
+                            <Text size="xsmall">Like</Text>
+                        </Box>
+                    </Box>
+                </Box>
+                <Box 
+                    gridArea="foto" 
+                    background="light-5"
+                    justify="center"
+                    align="center"
+                    direction="column"
+
+                >
+                    <Avatar size="70%" round="xlarge" src={src} margin={{bottom:"medium"}}/>
+                    <Text>Nome Usuario</Text>
+                </Box>
+                <Box 
+                    gridArea="descricao" 
+                    background=""
+                    justify="center"
+                    align="center"
+                    direction="column" 
+                    fill="true"
+                >
+                    <Grid
+                        rows={['xsmall', 'xsmall', 'xsmall', 'xsmall']}
+                        columns={['medium']}
+                        gap=""
+                        areas={[
+                            { name: 'NomeUsuario', start: [0, 0], end: [0, 0] },
+                            { name: 'Reviews', start: [0, 1], end: [0, 1] },
+                            { name: 'Data', start: [0, 2], end: [0, 2] },
+                            { name: 'Local', start: [0, 3], end: [0, 3] },
+                        ]}
+                    >
+                        <Box
+                            gridArea="NomeUsuario" 
+                            border={{color:"black", side:"bottom"}} 
+                            background="light-2"
+                            justify=""
+                            align="center"
+                            direction="row"
+                        >
+                            <Text margin={{left: "small"}} weight="bold"> Usuario:&ensp;</Text>
+                            <Text> Nome Completo do Usuario</Text>
+                        </Box>
+                        <Box
+                            gridArea="Reviews" 
+                            border={{color:"black", side:"bottom"}} 
+                            background="brand"
+                            justify=""
+                            align="center"
+                            direction="row"
+                        >
+                            <Text margin={{left: "small"}} weight="bold"> Reviews:&ensp;</Text>
+                            <Text>Quantidade de Reviews</Text>
+                        </Box>
+                        <Box
+                            gridArea="Data" 
+                            border={{color:"black", side:"bottom"}} 
+                            background="light-2"
+                            justify=""
+                            align="center"
+                            direction="row"
+                        >
+                            <Text margin={{left: "small"}} weight="bold"> Membro Desde:&ensp;</Text>
+                            <Text>Data</Text>
+                        </Box>
+                        <Box
+                            gridArea="Local"
+                            background="brand"
+                            justify=""
+                            align="center"
+                            direction="row"
+                        >
+                            <Text margin={{left: "small"}} weight="bold"> Local&ensp;</Text>
+                            <Text> Local Usuario </Text>
+                        </Box>
+                    </Grid>
+                </Box> 
+                <Box 
+                    gridArea="filmes" 
+                    background="light-6"
+                    align="center"
+                    justify="between"
+                >
+                    <Text size="large" weight="bold">Filmes</Text>
+                </Box> 
+            </Grid>
         </Box>
-        <Box gridArea="filmes" background="light-4">
-        </Box>
-        </Grid>
     </Page>
     );
 }

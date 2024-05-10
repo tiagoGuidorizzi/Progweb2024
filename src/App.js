@@ -18,6 +18,7 @@ function App() {
             <Router>
                 <NavHeader />
                 <Routes>
+                    <Route path="/" exact element={<Home />} /> 
                     <Route path="/Home" exact element={<Home />} />
                     <Route path="/Perfil" element={<Perfil />}/>
                     <Route path="/Favoritos" element={<Favoritos />}/>

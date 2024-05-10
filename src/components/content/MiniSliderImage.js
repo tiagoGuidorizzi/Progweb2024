@@ -4,6 +4,7 @@ import { Anchor, Box, Image, ResponsiveContext } from "grommet";
 import { BotaoAddLista } from "./BotaAddLista";
 
 const MiniSliderImage = ({name,score, src }) => (
+  
   <ResponsiveContext.Consumer>
     {size => (
       <Box>

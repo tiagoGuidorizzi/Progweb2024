@@ -47,7 +47,7 @@ class MiniSlider extends Component {
           {size => (
             <Box pad={{horizontal:"large"}}>
                 <Box>
-                    <Slider slidesToShow={this.getNumOfItemsToShow(1)} {...settings}>
+                    <Slider slidesToShow={this.getNumOfItemsToShow(size)} {...settings}>
                     {items}
                     </Slider>
                     
