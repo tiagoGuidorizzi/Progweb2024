@@ -3,12 +3,9 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import {
   Grommet,
 } from "grommet";
-
-
-
 import {NavHeader} from "./components/index.js";
 import { customTheme } from "./theme";
-import { Home,Perfil, Favoritos } from "./pages";
+import { Home,Perfil, Favoritos, Login } from "./pages";
 
 
 
@@ -18,7 +15,7 @@ function App() {
             <Router>
                 <NavHeader />
                 <Routes>
-                    <Route path="/" exact element={<Home />} /> 
+                    <Route path="/" exact element={<Login />} /> 
                     <Route path="/Home" exact element={<Home />} />
                     <Route path="/Perfil" element={<Perfil />}/>
                     <Route path="/Favoritos" element={<Favoritos />}/>
