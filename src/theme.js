@@ -10,7 +10,7 @@ export const customTheme = deepMerge(grommet, {
   colors: {
     brand: {
       dark: "#111010",
-      light: "#000000"
+      light: "#000020"
     },
     }
   },
