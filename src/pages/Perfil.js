@@ -6,6 +6,7 @@ import { AddCircle, Favorite } from "grommet-icons";
 const src ="./avatar.jpg"
 
 const Perfil = () => {
+    const user = JSON.parse(sessionStorage.getItem('user'));
     return (
     <Page
         justify="center"
@@ -40,29 +41,6 @@ const Perfil = () => {
                     >
                         <Text size="large">Perfil</Text>
                     </Box>
-                    <Box 
-                        justify="center"
-                        align="center"
-                        margin={{right:"small"}}
-                        direction="row"
-                    >
-                        <Box 
-                            margin="small"
-                            justify="center"
-                            align="center"
-                        >        
-                            <AddCircle size="medium"/>
-                            <Text size="xsmall">Follow</Text>
-                        </Box>
-                        <Box 
-                            margin="small"
-                            justify="center"
-                            align="center"
-                        >  
-                            <Favorite size="medium"/>
-                            <Text size="xsmall">Like</Text>
-                        </Box>
-                    </Box>
                 </Box>
                 <Box 
                     gridArea="foto" 
@@ -73,7 +51,7 @@ const Perfil = () => {
 
                 >
                     <Avatar size="70%" round="xlarge" src={src} margin={{bottom:"medium"}}/>
-                    <Text>Nome Usuario</Text>
+                    <Text>{user.username}</Text>
                 </Box>
                 <Box 
                     gridArea="descricao" 
@@ -103,7 +81,7 @@ const Perfil = () => {
                             direction="row"
                         >
                             <Text margin={{left: "small"}} weight="bold"> Usuario:&ensp;</Text>
-                            <Text> Nome Completo do Usuario</Text>
+                            <Text>{user.name}</Text>
                         </Box>
                         <Box
                             gridArea="Reviews" 
@@ -114,7 +92,7 @@ const Perfil = () => {
                             direction="row"
                         >
                             <Text margin={{left: "small"}} weight="bold"> Reviews:&ensp;</Text>
-                            <Text>Quantidade de Reviews</Text>
+                            <Text>{user.reviews}</Text>
                         </Box>
                         <Box
                             gridArea="Data" 
@@ -125,7 +103,7 @@ const Perfil = () => {
                             direction="row"
                         >
                             <Text margin={{left: "small"}} weight="bold"> Membro Desde:&ensp;</Text>
-                            <Text>Data</Text>
+                            <Text>{user.membroDesde}</Text>
                         </Box>
                         <Box
                             gridArea="Local"
@@ -135,7 +113,7 @@ const Perfil = () => {
                             direction="row"
                         >
                             <Text margin={{left: "small"}} weight="bold"> Local&ensp;</Text>
-                            <Text> Local Usuario </Text>
+                            <Text>{user.local}</Text>
                         </Box>
                     </Grid>
                 </Box> 

@@ -1,11 +1,11 @@
-import React from "react";
+import React, { lazy } from "react";
 import { Box, Text, Nav } from "grommet";
 import { Link } from "react-router-dom";
 
 
 const items = [
-    { label: 'Favoritos', href: '/Home' },
     { label: 'Meu Perfil', href: '/Perfil'},
+    {label: 'Login', href: '/'}
   ];
 
 const NavBar = () => (
