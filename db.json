@@ -1,0 +1,23 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "username": "exemplo@exemplo.com",
+        "password": "senha1",
+        "name": "User 1",
+        "reviews": 10,
+        "local": "Campo Grande",
+        "membroDesde": "01-01-2020"
+      },
+      {
+        "id": 2,
+        "username": "exemplo2@exemplo.com",
+        "password": "senha2",
+        "name": "User 2",
+        "reviews": 5,
+        "local": "São Paulo",
+        "membroDesde": "15-05-2021"
+      }
+    ]
+  }
+  
