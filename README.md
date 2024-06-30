@@ -2,8 +2,6 @@
 
 Tiago Giarranti Guidorizzi 2022.1906.051-6
 
-Nicolas Miranda Bento 2023.1906.030-5
-
 Flávio Antonio dos Santos Matos 2021.1907.004-8
 
 # Construção do Projeto
